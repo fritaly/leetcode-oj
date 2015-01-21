@@ -4,11 +4,11 @@ import java.util.Stack;
 
 public class ValidParentheses {
 
-    public boolean isValid(String s) {
-    	final Stack<Character> stack = new Stack<>();
+	public boolean isValid(String s) {
+		final Stack<Character> stack = new Stack<>();
 
-    	for (char c : s.toCharArray()) {
-			switch(c) {
+		for (char c : s.toCharArray()) {
+			switch (c) {
 			case '(':
 			case '{':
 			case '[':
@@ -30,8 +30,8 @@ public class ValidParentheses {
 				}
 				break;
 			}
-    	}
+		}
 
-    	return stack.isEmpty();
-    }
+		return stack.isEmpty();
+	}
 }

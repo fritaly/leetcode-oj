@@ -2,33 +2,33 @@ package com.github.fritaly.leetcode;
 
 public class PlusOne {
 
-    public int[] plusOne(int[] digits) {
-    	// The initial carry over represents the +1
-    	boolean carryOver = true;
+	public int[] plusOne(int[] digits) {
+		// The initial carry over represents the +1
+		boolean carryOver = true;
 
-    	for (int i = digits.length - 1; i >= 0; i--) {
-    		if (carryOver) {
-    			digits[i] += 1;
+		for (int i = digits.length - 1; i >= 0; i--) {
+			if (carryOver) {
+				digits[i] += 1;
 
-    			carryOver = false;
-    		}
+				carryOver = false;
+			}
 
-    		if (digits[i] >= 10) {
-    			digits[i] %= 10;
+			if (digits[i] >= 10) {
+				digits[i] %= 10;
 
-    			carryOver = true;
-    		}
+				carryOver = true;
+			}
 		}
 
-    	if (carryOver) {
-    		final int[] array = new int[digits.length + 1];
-    		array[0] = 1;
+		if (carryOver) {
+			final int[] array = new int[digits.length + 1];
+			array[0] = 1;
 
-    		System.arraycopy(digits, 0, array, 1, digits.length);
+			System.arraycopy(digits, 0, array, 1, digits.length);
 
 			return array;
-    	}
+		}
 
-    	return digits;
-    }
+		return digits;
+	}
 }

@@ -5,12 +5,12 @@ import java.util.List;
 
 public class PascalsTriangle {
 
-    public List<List<Integer>> generate(int numRows) {
-    	final List<List<Integer>> result = new ArrayList<>();
+	public List<List<Integer>> generate(int numRows) {
+		final List<List<Integer>> result = new ArrayList<>();
 
-    	List<Integer> previous = null;
+		List<Integer> previous = null;
 
-    	for (int n = 1; n <= numRows; n++) {
+		for (int n = 1; n <= numRows; n++) {
 			final List<Integer> list = new ArrayList<>();
 
 			for (int i = 0; i < n; i++) {
@@ -24,6 +24,6 @@ public class PascalsTriangle {
 			result.add(previous = list);
 		}
 
-    	return result;
-    }
+		return result;
+	}
 }

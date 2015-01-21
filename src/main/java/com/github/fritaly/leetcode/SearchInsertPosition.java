@@ -2,13 +2,13 @@ package com.github.fritaly.leetcode;
 
 public class SearchInsertPosition {
 
-    public int searchInsert(int[] A, int target) {
-    	for (int i = 0; i < A.length; i++) {
+	public int searchInsert(int[] A, int target) {
+		for (int i = 0; i < A.length; i++) {
 			if (A[i] >= target) {
 				return i;
 			}
 		}
 
-    	return A.length;
-    }
+		return A.length;
+	}
 }

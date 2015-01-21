@@ -6,9 +6,9 @@ public class PalindromeNumber {
 		return new StringBuilder(string).reverse().toString();
 	}
 
-    public boolean isPalindrome(int x) {
-    	final String text = Integer.toString(x);
+	public boolean isPalindrome(int x) {
+		final String text = Integer.toString(x);
 
 		return text.equals(reverse(text));
-    }
+	}
 }

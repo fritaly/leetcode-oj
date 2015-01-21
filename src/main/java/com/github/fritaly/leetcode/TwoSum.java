@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class TwoSum {
 
-    public int[] twoSum(int[] numbers, int target) {
-    	final Map<Integer, Integer> indices = new LinkedHashMap<>();
+	public int[] twoSum(int[] numbers, int target) {
+		final Map<Integer, Integer> indices = new LinkedHashMap<>();
 
-    	for (int i = 0; i < numbers.length; i++) {
+		for (int i = 0; i < numbers.length; i++) {
 			indices.put(numbers[i], i);
 		}
 
-    	for (int i = 0; i < numbers.length; i++) {
+		for (int i = 0; i < numbers.length; i++) {
 			final int i1 = numbers[i];
 			final int diff = target - i1;
 
@@ -23,6 +23,6 @@ public class TwoSum {
 			}
 		}
 
-    	throw new RuntimeException("No match found");
-    }
+		throw new RuntimeException("No match found");
+	}
 }

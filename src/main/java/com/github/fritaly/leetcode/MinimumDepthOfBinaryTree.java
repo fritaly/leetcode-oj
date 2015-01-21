@@ -32,7 +32,7 @@ public class MinimumDepthOfBinaryTree {
 		}
 	}
 
-    public int minDepth(TreeNode root) {
+	public int minDepth(TreeNode root) {
 		return getDepth(root);
 	}
 }

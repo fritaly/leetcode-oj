@@ -5,10 +5,10 @@ import java.util.List;
 
 public class PascalsTriangleII {
 
-    public List<Integer> getRow(int rowIndex) {
-    	List<Integer> previous = null;
+	public List<Integer> getRow(int rowIndex) {
+		List<Integer> previous = null;
 
-    	for (int n = 1; n <= rowIndex + 1; n++) {
+		for (int n = 1; n <= rowIndex + 1; n++) {
 			final List<Integer> list = new ArrayList<>();
 
 			for (int i = 0; i < n; i++) {
@@ -22,6 +22,6 @@ public class PascalsTriangleII {
 			previous = list;
 		}
 
-    	return previous;
-    }
+		return previous;
+	}
 }

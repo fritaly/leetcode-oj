@@ -5,52 +5,52 @@ import java.util.List;
 
 public class MultiplyStrings {
 
-    private static String reverse(String string) {
-    	return new StringBuilder(string).reverse().toString();
-    }
+	private static String reverse(String string) {
+		return new StringBuilder(string).reverse().toString();
+	}
 
-    private String add(String num1, String num2) {
-    	final StringBuilder buffer = new StringBuilder();
+	private String add(String num1, String num2) {
+		final StringBuilder buffer = new StringBuilder();
 
-    	num1 = reverse(num1);
-    	num2 = reverse(num2);
+		num1 = reverse(num1);
+		num2 = reverse(num2);
 
-    	boolean carryOver = false;
+		boolean carryOver = false;
 
-    	for (int i = 0; i < Math.max(num1.length(), num2.length()); i++) {
-    		final int digit1 = (i < num1.length()) ? num1.charAt(i) - '0' : 0;
-    		final int digit2 = (i < num2.length()) ? num2.charAt(i) - '0' : 0;
+		for (int i = 0; i < Math.max(num1.length(), num2.length()); i++) {
+			final int digit1 = (i < num1.length()) ? num1.charAt(i) - '0' : 0;
+			final int digit2 = (i < num2.length()) ? num2.charAt(i) - '0' : 0;
 
-    		int sum = digit1 + digit2;
+			int sum = digit1 + digit2;
 
-    		if (carryOver) {
-    			sum++;
+			if (carryOver) {
+				sum++;
 
-    			carryOver = false;
-    		}
+				carryOver = false;
+			}
 
-    		buffer.append(sum % 10);
+			buffer.append(sum % 10);
 
-    		carryOver = (sum >= 10);
+			carryOver = (sum >= 10);
 		}
 
-    	if (carryOver) {
-    		buffer.append("1");
-    	}
+		if (carryOver) {
+			buffer.append("1");
+		}
 
-    	// Remove trailing zeroes
-    	while ((buffer.charAt(buffer.length() - 1) == '0') && (buffer.length() > 1)) {
-    		buffer.setLength(buffer.length() - 1);
-    	}
+		// Remove trailing zeroes
+		while ((buffer.charAt(buffer.length() - 1) == '0') && (buffer.length() > 1)) {
+			buffer.setLength(buffer.length() - 1);
+		}
 
-    	return reverse(buffer.toString());
-    }
+		return reverse(buffer.toString());
+	}
 
 	public String multiply(String num1, String num2) {
-        final List<String> queue = new ArrayList<>();
-        final StringBuilder buffer = new StringBuilder();
+		final List<String> queue = new ArrayList<>();
+		final StringBuilder buffer = new StringBuilder();
 
-        for (int i = num1.length() - 1; i >= 0; i--) {
+		for (int i = num1.length() - 1; i >= 0; i--) {
 			final int digit1 = num1.charAt(i) - '0';
 
 			for (int n = 0; n < (num1.length() - 1 - i); n++) {
@@ -84,10 +84,10 @@ public class MultiplyStrings {
 		}
 
 		// Remove trailing zeroes
-    	while (result.startsWith("0") && (result.length() > 1)) {
-    		result = result.substring(1);
-    	}
+		while (result.startsWith("0") && (result.length() > 1)) {
+			result = result.substring(1);
+		}
 
 		return result;
-    }
+	}
 }

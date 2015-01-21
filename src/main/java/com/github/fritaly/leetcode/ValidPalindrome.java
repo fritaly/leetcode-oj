@@ -6,9 +6,9 @@ public class ValidPalindrome {
 		return new StringBuilder(string).reverse().toString();
 	}
 
-    public boolean isPalindrome(String s) {
-    	final String string = s.replaceAll("[^a-zA-Z0-9]+", "");
+	public boolean isPalindrome(String s) {
+		final String string = s.replaceAll("[^a-zA-Z0-9]+", "");
 
-    	return string.equalsIgnoreCase(reverse(string));
-    }
+		return string.equalsIgnoreCase(reverse(string));
+	}
 }

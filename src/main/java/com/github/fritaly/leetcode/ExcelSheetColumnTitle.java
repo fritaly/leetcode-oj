@@ -2,21 +2,21 @@ package com.github.fritaly.leetcode;
 
 public class ExcelSheetColumnTitle {
 
-    public String convertToTitle(int n) {
-        final StringBuilder builder = new StringBuilder();
+	public String convertToTitle(int n) {
+		final StringBuilder builder = new StringBuilder();
 
-        do {
-        	n--;
+		do {
+			n--;
 
-        	final int remainder = n % 26;
+			final int remainder = n % 26;
 
-        	builder.append((char) ('A' + remainder));
+			builder.append((char) ('A' + remainder));
 
-        	n /= 26;
-        } while (n > 0);
+			n /= 26;
+		} while (n > 0);
 
-        builder.reverse();
+		builder.reverse();
 
-        return builder.toString();
-    }
+		return builder.toString();
+	}
 }
