@@ -27,10 +27,8 @@ public class ZigZagConversion {
 				index--;
 			}
 
-			if ((index == 0) && !forward) {
-				forward = true;
-			} else if ((index == builders.length - 1) && forward) {
-				forward = false;
+			if ((index == 0) || (index == builders.length - 1)) {
+				forward = !forward;
 			}
 		}
 
