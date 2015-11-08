@@ -44,4 +44,9 @@ class PeekingIterator implements Iterator<Integer> {
 	public boolean hasNext() {
 	    return (element != null) || iterator.hasNext();
 	}
+	
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
+	}
 }
