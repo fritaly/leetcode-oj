@@ -1,6 +1,8 @@
 leetcode-oj
 ===========
 
-[![Build Status](https://travis-ci.org/fritaly/leetcode-oj.svg)](https://travis-ci.org/fritaly/leetcode-oj)
+![Build Status](https://github.com/fritaly/leetcode-oj/actions/workflows/gradle/badge.svg)
 
-Solutions for LeetCode OJ problems
+My solutions to some of the [LeetCode OJ](https://leetcode.com/) coding challenges.
+
+Build with `./gradlew`.
